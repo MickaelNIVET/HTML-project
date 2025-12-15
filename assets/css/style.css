@@ -15,6 +15,14 @@
   scrollbar-width: none; /* Firefox */
 }
 
+body {
+  font-family: "easyjet Rounded Book", sans-serif;
+}
+
+body button {
+  cursor: pointer;
+}
+
 header {
   background-image: url(/assets/img/headbar.gif);
   color: white;
@@ -23,10 +31,9 @@ header {
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
-  font-family: easyjet Rounded Book, sans-serif;
 }
 
-header > div {
+header > nav {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -45,48 +52,112 @@ header button {
   padding: 7px 10px;
   margin: 10px 7px;
   border-radius: 2px;
-  font-family: easyjet Rounded Book, sans-serif;
 }
 
 .beach-section {
-  width: 100%;
-}
-
-/*____main____*/
-
-.mainrelativ {
+  margin-bottom: 20px;
   position: relative;
-  border: solid 2px black;
 }
 
-.mainabsolute {
-  border: solid 2px red;
-  position: absolute;
+.beach-section img {
   width: 100%;
-  height: 385px;
+  height: 650px;
+  object-fit: cover;
 }
 
-.mainwrapper {
-  border: solid 2px yellow;
-  width: 960px;
-  height: 100%;
-  align-items: center;
+.beach-absolute {
+  position: absolute;
+  top: 20px;
+  height: 430px;
+  width: 100vw;
+}
+
+.bookingmenu-container {
+  max-width: 960px;
   margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.translucentbar {
+.left-column {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+
+.left-column > p:first-child {
+  font-family: easyJet Generation Headline, sans-serif;
+  font-size: 50px;
+}
+
+.left-column > p:nth-child(2) {
+  font-size: 19px;
+}
+
+.left-column button {
+  background-color: #ff6602;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  align-self: flex-start;
+  font-size: 16px;
+}
+
+.left-column-price > p:nth-child(2) {
+  font-size: 50px;
+}
+
+/*-------------*/
+
+.translucent-bar-absolute {
   position: absolute;
-  width: 100%;
-  height: 130px;
   bottom: 0px;
-  background-color: white;
-  opacity: 0.5;
+  height: 130px;
+  width: 100vw;
+  background-color: rgb(255, 255, 255, 0.7);
+}
+
+.container-translucent {
+  margin: 0 auto;
+  max-width: 960px;
+  height: 100%;
+  padding-top: 10px;
+}
+
+.container-translucent > p:last-child {
+  font-size: 12px;
+}
+
+.offers button {
+  background-color: #f70;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+
+.offers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.offers > div > p {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.offers > p:first-child {
+  padding: 10px 0px;
 }
 
 /*__________*/
 
 .container-worldwide {
-  width: 960px;
+  max-width: 960px;
   align-items: center;
   margin: 0 auto;
   border-top: none;
@@ -95,8 +166,7 @@ header button {
   display: flex;
   border-radius: 10px;
   overflow: hidden;
-  margin-bottom: 20px;
-  font-family: easyjet Rounded Book, sans-serif;
+  margin-bottom: 50px;
 }
 
 .container-worldwide div {
@@ -115,25 +185,33 @@ header button {
 }
 
 .container-worldwide button {
+  background-color: #ff6602;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  width: 150px;
   align-self: flex-end;
-  font-family: easyjet Rounded Book, sans-serif;
 }
+
 .container-worldwide p {
   align-self: auto;
   line-height: 100%;
+  margin-left: 10px;
+  font-size: 14px;
 }
 
 /* CAROUSSEL */
 
 .caroussel {
   height: 380px;
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
   display: flex;
   gap: 20px;
   overflow: scroll;
   padding: 2px;
-  font-family: easyjet Rounded Book, sans-serif;
+  margin-bottom: 50px;
 }
 
 .caroussel div {
@@ -161,12 +239,11 @@ header button {
   border-radius: 5px;
   position: absolute;
   bottom: 5px;
-  font-family: easyjet Rounded Book, sans-serif;
 }
 /*________*/
 
 .container-bretagne {
-  width: 960px;
+  max-width: 960px;
   align-items: center;
   margin: 0 auto;
   border-top: none;
@@ -175,8 +252,7 @@ header button {
   display: flex;
   border-radius: 10px;
   overflow: hidden;
-  margin-bottom: 30px;
-  font-family: easyjet Rounded Book, sans-serif;
+  margin-bottom: 50px;
 }
 
 .container-bretagne div {
@@ -195,12 +271,19 @@ header button {
 }
 
 .container-bretagne button {
+  background-color: #ff6602;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  width: 150px;
   align-self: flex-end;
-  font-family: easyjet Rounded Book, sans-serif;
 }
+
 .container-bretagne p {
   align-self: auto;
-  line-height: 100%;
+  margin-left: 10px;
+  font-size: 14px;
 }
 
 /*__________*/
@@ -208,11 +291,10 @@ header button {
 .triple-img {
   align-items: center;
   margin: 0 auto;
-  width: 960px;
+  max-width: 960px;
   display: flex;
   justify-content: space-around;
   margin-bottom: 50px;
-  font-family: easyjet Rounded Book, sans-serif;
 }
 
 .triple-img > div {
@@ -239,10 +321,15 @@ header button {
   border-radius: 2%;
 }
 
+.triple-img p {
+  line-height: 30px;
+  margin-left: 10px;
+}
+
 /*____________*/
 
 div > h3 {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 10px;
   justify-content: space-between;
@@ -260,14 +347,13 @@ h4 {
 .caroussel-two {
   align-items: center;
   margin: 0 auto;
-  width: 960px;
+  max-width: 960px;
   display: flex;
   overflow: scroll;
   margin-bottom: 30px;
-  font-family: easyjet Rounded Book, sans-serif;
 }
 
-.caroussel-two p {
+.caroussel-two > div {
   background-color: #303030;
   color: white;
   width: 150px;
@@ -277,42 +363,29 @@ h4 {
   padding: 10px;
   line-height: 100%;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.caroussel-two p:hover {
+.caroussel-two i {
+  margin: 0 auto;
+  font-size: 40px;
+  padding-bottom: 10px;
+}
+
+.caroussel-two div:hover {
   background-color: #ff6602;
 }
+
 /*___________*/
 
 h2,
 h3 {
-  font-family: easyjet Rounded Book, sans-serif;
   font-size: 16px;
   margin: 10px;
   margin-bottom: 20px;
   font-weight: bold;
-}
-
-p {
-  line-height: 30px;
-  margin-left: 10px;
-}
-
-section div button {
-  background-color: #ff6602;
-  color: white;
-  border: none;
-  padding: 10px;
-  margin: 10px;
-  width: 150px;
-}
-
-section div p {
-  font-size: 14px;
-}
-
-.p {
-  line-height: normal;
 }
 
 footer {
@@ -320,14 +393,13 @@ footer {
 }
 
 .container-footer {
-  width: 960px;
+  max-width: 960px;
   align-items: center;
   margin: 0 auto;
   border-top: none;
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
-  font-family: easyjet Rounded Book, sans-serif;
 }
 
 .container-footer p {

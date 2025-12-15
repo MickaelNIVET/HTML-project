@@ -5,8 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EasyJet</title>
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/bookingMenuStyle.css" />
     <link rel="stylesheet" href="./assets/css/fonts.css" />
     <script
       src="https://kit.fontawesome.com/ca9d2723b0.js"
@@ -15,28 +16,142 @@
   </head>
   <body>
     <header>
-      <div>
+      <nav>
         <img src="assets/img/ej-title.png" alt="EJ" />
         <a href="">Infos de vol</a>
         <a href="">Voitures/Autres services</a>
         <a href="">Buisness</a>
         <a href="">Hôtels</a>
         <a href="">Mes réservations</a>
-      </div>
-      <div>
+      </nav>
+      <nav>
         <button>S'enregistrer</button>
         <a href="">Se connecter</a>
         <a href="">Aide</a>
         <a href="">fr-FR</a>
         <img src="assets/img/drapeau.png" alt="drapeau" />
-      </div>
+      </nav>
     </header>
     <main>
-      <section>
-        <div class="mainrelativ">
-          <div class="mainabsolute"><div class="mainwrapper"></div></div>
-          <div class="translucentbar"></div>
-          <img class="beach-section" src="assets/img/beach.jpg" alt="beach" />
+      <section class="beach-section">
+        <img src="assets/img/beach.jpg" alt="beach" />
+        <div class="beach-absolute">
+          <div class="container bookingmenu-container">
+            <section class="bookingmenu">
+              <div class="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <label for="checkbox">Allez simple</label>
+              </div>
+
+              <div class="destination">
+                <div>
+                  <label> De : <input type="text" /></label>
+                </div>
+
+                <div class="destination-line"></div>
+
+                <div>
+                  <label> À : <input type="text" /></label>
+                </div>
+              </div>
+
+              <div class="date-picker">
+                <div>
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <p>Aller</p>
+                </div>
+                <div></div>
+                <div>
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <p>Retour</p>
+                </div>
+              </div>
+
+              <div class="quantity">
+                <div>
+                  <p>Adultes (16+)</p>
+                  <div class="counter-div">
+                    <button style="color: #f70">
+                      <i class="fa-solid fa-minus"></i></button
+                    ><span>1</span
+                    ><button style="color: #f70">
+                      <i class="fa-solid fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div>
+                  <p>Enfants (2-15)</p>
+                  <div class="counter-div">
+                    <button><i class="fa-solid fa-minus"></i></button
+                    ><span>0</span
+                    ><button style="color: #f70">
+                      <i class="fa-solid fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div>
+                  <p>Bébés (<2)</p>
+                  <div class="counter-div">
+                    <button><i class="fa-solid fa-minus"></i></button
+                    ><span>0</span
+                    ><button style="color: #f70">
+                      <i class="fa-solid fa-plus"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <button>Afficher les vols ></button>
+              <div class="bookingmenu-bottom">
+                <p>À propos de l'assistance spéciale ></p>
+                <p>Nous compensons nos émissions carbone ></p>
+              </div>
+            </section>
+            <div class="left-column">
+              <p>NAGER. DORMIR. MANGER. RECOMMENCER.</p>
+              <p>
+                Cet été, détendez-vous à la plage : Baléares, Sardaigne,
+                Sicile... Vous avez le choix !
+              </p>
+              <div class="left-column-price">
+                <p>à partir de :</p>
+                <p>29,75€</p>
+              </div>
+              <button>Réservez maintenant</button>
+            </div>
+          </div>
+        </div>
+        <div class="translucent-bar-absolute">
+          <div class="container-translucent">
+            <div class="offers">
+              <div>
+                <p>Lisbone</p>
+                <p>à partir de Paris Charles de Gaulle 29,75€ nov. 2025</p>
+                <button>Réservez ></button>
+              </div>
+              <div>
+                <p>Lisbone</p>
+                <p>à partir de Paris Charles de Gaulle 29,75€ nov. 2025</p>
+                <button>Réservez ></button>
+              </div>
+              <div>
+                <p>Lisbone</p>
+                <p>à partir de Paris Charles de Gaulle 29,75€ nov. 2025</p>
+                <button>Réservez ></button>
+              </div>
+              <div>
+                <p>Lisbone</p>
+                <p>à partir de Paris Charles de Gaulle 29,75€ nov. 2025</p>
+                <button>Réservez ></button>
+              </div>
+            </div>
+            <p>
+              Le prix indiqué est valable pour un allé simple, taxes incluses, à
+              disponibilité limitée.
+            </p>
+          </div>
         </div>
       </section>
       <div class="container-default">
@@ -58,7 +173,7 @@
         <div class="caroussel">
           <div>
             <img src="assets/img/carousel1.jpg" alt="" />
-            <h3>Location de voiture</h3>
+            <p>Location de voiture</p>
 
             <p>
               Vous avez besoin de réserver une voiture ? Comparez les prix de
@@ -154,18 +269,54 @@
         </div>
 
         <div class="caroussel-two">
-          <p>Questions fréquentes</p>
-          <p>Bagages</p>
-          <p>Retards et annulations</p>
-          <p>S'enregistrer en ligne</p>
-          <p>Effectuer un changement</p>
-          <p>Protection contre les restriction de voyage</p>
-          <p>Questions fréquentes</p>
-          <p>Bagages</p>
-          <p>Retards et annulations</p>
-          <p>S'enregistrer en ligne</p>
-          <p>Effectuer un changement</p>
-          <p>Protection contre les restriction de voyage</p>
+          <div>
+            <article>Questions fréquentes</article>
+            <i class="fa-regular fa-circle-question"></i>
+          </div>
+          <div>
+            <article>Bagages</article>
+            <i class="fa-solid fa-suitcase"></i>
+          </div>
+          <div>
+            <article>Retards et annulations</article>
+            <i class="fa-regular fa-clock"></i>
+          </div>
+          <div>
+            <article>S'enregistrer en ligne</article>
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <div>
+            <article>Effectuer un changement</article>
+            <i class="fa-solid fa-pen"></i>
+          </div>
+          <div>
+            <article>Protection contre les restriction de voyage</article>
+            <i class="fa-solid fa-user-shield"></i>
+          </div>
+          <div>
+            <article>Questions fréquentes</article>
+            <i class="fa-regular fa-circle-question"></i>
+          </div>
+          <div>
+            <article>Bagages</article>
+            <i class="fa-solid fa-suitcase"></i>
+          </div>
+          <div>
+            <article>Retards et annulations</article>
+            <i class="fa-regular fa-clock"></i>
+          </div>
+          <div>
+            <article>S'enregistrer en ligne</article>
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <div>
+            <article>Effectuer un changement</article>
+            <i class="fa-solid fa-pen"></i>
+          </div>
+          <div>
+            <article>Protection contre les restriction de voyage</article>
+            <i class="fa-solid fa-user-shield"></i>
+          </div>
         </div>
       </section>
     </main>
